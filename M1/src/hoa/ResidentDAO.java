@@ -3,6 +3,10 @@ package hoa;
 import java.sql.*;
 
 public class ResidentDAO {
+    
+    public void addResident(Resident r){
+        
+    
       // VALIDATION
     if (r.getName().isEmpty() || 
         r.getAddress().isEmpty() || 
@@ -80,6 +84,7 @@ public boolean checkResident(String name) {
             return false;
         }
     }
+}
 
 
 
