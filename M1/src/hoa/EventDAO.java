@@ -15,7 +15,7 @@ public class EventDAO {
 
             System.out.println("Event Registration Failed!");
         }else
-             System.out.println("Event Registration Failed.");
+             System.out.println("Event Registration Successfully.");
 
 
         try {
@@ -55,7 +55,7 @@ public class EventDAO {
                 );
             }
 
-            // ❗ NO DATA CASE
+            //  NO DATA CASE
             if (!hasData) {
                 System.out.println("No events available.");
             }
@@ -65,7 +65,7 @@ public class EventDAO {
         }
     }
 
-    // ❗ CANCEL EVENT
+    // CANCEL EVENT
     public void cancelEvent(int id) {
         try {
             Connection conn = DBConnection.getConnection();
@@ -75,7 +75,7 @@ public class EventDAO {
             ps.setInt(1, id);
             int rows = ps.executeUpdate();
 
-            // ✅ CHECK IF EVENT EXISTS
+            //  CHECK IF EVENT EXISTS
             if (rows > 0) {
                 System.out.println("Event cancelled!");
             } else {
@@ -87,4 +87,3 @@ public class EventDAO {
         }
     }
 }
-
